@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_default_margin">
+
+    <TextView
+        android:id="@+id/tv_artist_songview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        tools:text="Iron Maiden" />
+
+    <TextView
+        android:id="@+id/delimeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_artist_songview"
+        android:layout_toEndOf="@id/tv_artist_songview"
+        tools:text="@string/delimteter" />
+
+    <TextView
+        android:id="@+id/tv_songname_songview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/delimeter"
+        tools:text="Run to the Hills" />
+
+    <TextView
+        android:id="@+id/tv_length_songview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tv_artist_songview"
+        android:layout_marginEnd="16dp"
+        tools:text="05:46" />
+
+    <TextView
+        android:id="@+id/tv_album_songview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_artist_songview"
+        android:layout_below="@id/tv_artist_songview"
+        tools:text="Album" />
+</RelativeLayout>
+
+

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dr. Oid</string>
+    <string name="playlist_button">Playlist</string>
+    <string name="diskogs">Diskogs</string>
+    <string name="info_button">Artist info</string>
+    <string name="delimteter">-</string>
+</resources>
