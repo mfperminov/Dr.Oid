@@ -3,5 +3,12 @@
     <string name="playlist_button">Playlist</string>
     <string name="diskogs">Diskogs</string>
     <string name="info_button">Artist info</string>
-    <string name="delimteter">-</string>
+    <string name="delimeter">-</string>
+    <string name="now_playing_activity_name">Now Playing</string>
+    <string name="artist_info_activity_name">Artist Info</string>
+    <string name="playlist_activity_name">Playlist</string>
+    <string name="artist_example">Judas Priest</string>
+    <string name="song_title_example">Monsters of Rock</string>
+    <string name="album_example">Ram It Down</string>
+    <string name="length_example">04:48</string>
 </resources>

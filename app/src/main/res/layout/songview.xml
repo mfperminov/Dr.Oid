@@ -10,10 +10,10 @@
         android:id="@+id/tv_artist_songview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        tools:text="Iron Maiden" />
+        android:layout_marginBottom="@dimen/margin_song_descrip"
+        android:layout_marginEnd="@dimen/margin_song_descrip"
+        android:layout_marginStart="@dimen/margin_song_descrip"
+        tools:text="@string/artist_example" />
 
     <TextView
         android:id="@+id/delimeter"
@@ -21,33 +21,38 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/tv_artist_songview"
         android:layout_toEndOf="@id/tv_artist_songview"
-        tools:text="@string/delimteter" />
+        android:layout_toRightOf="@id/tv_artist_songview"
+        tools:text="@string/delimeter" />
 
     <TextView
         android:id="@+id/tv_songname_songview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/margin_song_descrip"
+        android:layout_marginStart="@dimen/margin_song_descrip"
+        android:layout_toRightOf="@id/delimeter"
         android:layout_toEndOf="@id/delimeter"
-        tools:text="Run to the Hills" />
+        tools:text="@string/song_title_example" />
 
     <TextView
         android:id="@+id/tv_length_songview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignTop="@id/tv_artist_songview"
-        android:layout_marginEnd="16dp"
-        tools:text="05:46" />
+        android:layout_marginRight="@dimen/margin_song_descrip"
+        android:layout_marginEnd="@dimen/margin_song_descrip"
+        tools:text="@string/length_example" />
 
     <TextView
         android:id="@+id/tv_album_songview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/tv_artist_songview"
+        android:layout_alignLeft="@id/tv_artist_songview"
         android:layout_below="@id/tv_artist_songview"
-        tools:text="Album" />
+        tools:text="@string/album_example" />
 </RelativeLayout>
 
 

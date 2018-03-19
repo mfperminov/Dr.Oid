@@ -9,15 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NowPlaying">
+        <activity
+            android:name=".NowPlayingActivity"
+            android:label="@string/now_playing_activity_name"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Playlist" />
-        <activity android:name=".ArtistInfo"></activity>
+        <activity
+            android:name=".PlaylistActivity"
+            android:label="@string/playlist_activity_name"
+            android:parentActivityName=".NowPlayingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NowPlayingActivity"/>
+        </activity>
+        <activity
+            android:name=".ArtistInfoActivity"
+            android:label="@string/artist_info_activity_name"
+            android:parentActivityName=".NowPlayingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NowPlayingActivity"/>
+        </activity>
     </application>
+
 
 </manifest>

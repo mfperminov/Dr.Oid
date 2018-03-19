@@ -1,15 +1,17 @@
 package com.example.mperminov.droid;
 
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Playlist extends AppCompatActivity {
+public class PlaylistActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +35,34 @@ public class Playlist extends AppCompatActivity {
         SongAdapter adapter = new SongAdapter(this, numberOfTheBeast);
         final ListView playlist = findViewById(R.id.playlist);
         playlist.setAdapter(adapter);
-        //when user tap on list item it must return to now_playing actoivity and set chosen song for playing
+        //when user tap on list item it must return to now_playing activity and set chosen song for playing
         playlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Object tappedSong = playlist.getItemAtPosition(i);
                 Song song = (Song) tappedSong;
-                Intent nowPlayingIntent = new Intent(Playlist.this, NowPlaying.class);
-                nowPlayingIntent.putExtra("artist", song.getmArtist());
-                nowPlayingIntent.putExtra("songTitle", song.getmTitle());
-                nowPlayingIntent.putExtra("length", song.getmLength());
-                nowPlayingIntent.putExtra("album", song.getmAlbum());
-                nowPlayingIntent.putExtra("cover", song.getmAlbumArt());
+                Intent nowPlayingIntent = new Intent(PlaylistActivity.this, NowPlayingActivity.class);
+                nowPlayingIntent.putExtra(IntentExtraStrings.getArtist(), song.getmArtist());
+                nowPlayingIntent.putExtra(IntentExtraStrings.getmTitle(), song.getmTitle());
+                nowPlayingIntent.putExtra(IntentExtraStrings.getLength(), song.getmLength());
+                nowPlayingIntent.putExtra(IntentExtraStrings.getAlbum(), song.getmAlbum());
+                nowPlayingIntent.putExtra(IntentExtraStrings.getCover(), song.getmAlbumArt());
                 startActivity(nowPlayingIntent);
             }
         });
-
+    }
+    /* method to respond on selection of menu items
+    * now it's only Up button, which actually works even without it.
+    * But for future app expanding and development
+    * I will remain it here
+    */
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

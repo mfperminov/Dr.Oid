@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.mperminov.droid.NowPlaying">
+    tools:context="com.example.mperminov.droid.NowPlayingActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/activity_default_margin"
         android:layout_weight="1">
 
         <Button
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        tools:src="@drawable/number_of_the_beast_cover" />
+        tools:src="@drawable/ram_it_down_cover" />
 
     <SeekBar
         android:layout_width="match_parent"
@@ -55,10 +55,10 @@
             android:id="@+id/tv_artist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Iron Maiden" />
+            android:layout_marginBottom="@dimen/margin_song_descrip"
+            android:layout_marginEnd="@dimen/margin_song_descrip"
+            android:layout_marginStart="@dimen/margin_song_descrip"
+            tools:text="@string/artist_example" />
 
         <TextView
             android:id="@+id/delimeter"
@@ -66,16 +66,16 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/tv_artist"
             android:layout_toEndOf="@id/tv_artist"
-            android:text="@string/delimteter" />
+            tools:text="@string/delimeter" />
 
         <TextView
             android:id="@+id/tv_songtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/margin_song_descrip"
+            android:layout_marginStart="@dimen/margin_song_descrip"
             android:layout_toEndOf="@id/delimeter"
-            tools:text="Run to the Hills" />
+            tools:text="@string/song_title_example" />
 
         <TextView
             android:id="@+id/length"
@@ -83,8 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@id/tv_artist"
-            android:layout_marginEnd="16dp"
-            tools:text="05:46" />
+            android:layout_marginEnd="@dimen/margin_song_descrip"
+            tools:text="@string/length_example" />
 
         <TextView
             android:id="@+id/tv_album"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/tv_artist"
             android:layout_below="@id/tv_artist"
-            tools:text="Album" />
+            tools:text="@string/album_example" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -105,21 +105,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:layout_marginStart="@dimen/button_margin"
             android:src="@drawable/play" />
 
         <ImageButton
-            android:layout_alignTop="@id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@id/play_button"
             android:layout_toEndOf="@id/play_button"
             android:src="@drawable/right_end" />
 
         <ImageButton
-            android:layout_alignTop="@id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@id/play_button"
             android:layout_toStartOf="@id/play_button"
             android:src="@drawable/left_end" />
 
